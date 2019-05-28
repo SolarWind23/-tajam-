@@ -1,0 +1,93 @@
+.team {
+    padding: 70px 0px;
+    text-align: center;
+    background: url('../img/team-bg-img.png');
+    background-size: cover;
+    @include media-breakpoint-down(sm) { 
+        padding: 35px 0px;
+    }
+    
+    .introduce {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .title{
+            margin-bottom: 1rem;
+            @include font-style($playfair-bo,22px,$w);
+        }
+
+        .subtitle{
+            margin-bottom: 17px;
+            @include font-style($playfair-r,14px,$w-text);
+        }
+
+        .stroke {
+            width: 50px;
+            margin-bottom: 45px;
+            border:1px solid $stroke;
+            @include media-breakpoint-only(xs) {
+                margin-bottom: 35px;
+            }
+        }
+    }
+    .member {
+        &-img {
+            width: 100%;
+            object-fit: cover;
+            @include media-breakpoint-only(xs) {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 30px;
+        }
+       
+    }
+
+    .info {
+        border: 1px solid $d-gray;
+        @include media-breakpoint-only(xs) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .name {
+            margin-top: 20px;
+            margin-bottom: 12px;
+            @include font-style($roboto-b,14px,$w-text);
+        }
+        
+        .activity {
+            margin-bottom: 25px;
+            @include font-style($roboto-l,13px,$w-text);
+        }
+    }
+    .to-join {
+        margin-top: 70px;
+        @include media-breakpoint-down(sm) {
+            margin:0px;
+        }
+
+        .text {
+            @include font-style($roboto-l,14px,$w-text);
+        }
+
+        .btn {
+            border-radius: 0px;
+            border:1px solid $d-gray;
+            @include font-style($hammer,16px,$w-text);
+
+            &:hover{
+                color: $hover;
+                border-color: $hover;
+            }
+
+            &:focus, &:active {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}

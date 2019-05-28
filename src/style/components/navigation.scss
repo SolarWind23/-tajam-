@@ -1,0 +1,33 @@
+.header {
+    position: relative;
+}
+.menu {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100vw;
+    position: absolute;
+    @include media-breakpoint-down(md) {
+        position: fixed;
+        background: $menu-bg;
+    }
+    .logo {
+        @include font-style ($roboto-t, 30px,$hover);
+        &:hover {
+            color: $hover;
+        }
+        &-img {
+            margin-right: 10px;
+        }
+    }
+
+   .nav-wrapper {
+       justify-content: flex-end;
+        .link {
+            @include font-style ($roboto-b, 13px,$w);
+            &:hover {
+                color:$hover;
+            }
+        }
+    }
+}

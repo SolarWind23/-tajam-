@@ -1,0 +1,15 @@
+@import "./utils/vars";
+@import "./utils/mixins";
+@import "./base/fonts.scss";
+@import "./vendors/icons/fontawesome.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./components/navigation.scss";
+@import "./components/slideShow.scss";
+@import "./components/aboutUs.scss";
+@import "./components/expertise.scss";
+@import "./components/team.scss";
+@import "./components/ourWork.scss";
+@import "./components/testimonials.scss";
+@import "./components/contact.scss";
+@import "./components/footer.scss";

@@ -1,0 +1,92 @@
+.slide-show {
+    .carousel-wrapper {
+        @include media-breakpoint-down(lg) {
+            height: 100vh;
+            z-index: 0;
+
+            .carousel-content,.content-item {
+                z-index: 0;
+                height: 100%;
+            }
+        }
+    }
+    .indicators-list {
+        margin: 0;
+        bottom: 10%;
+        transform: translateY(-10%);
+        @include media-breakpoint-only(xs) {
+            bottom: 5%;
+            transform: translateY(-5%);
+        }
+        li {
+            width: 11px;
+            height: 11px;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1px solid $l-gray;
+            background-color: transparent;
+
+            &.active,&:hover{
+                background: $hover;
+                border-color: $hover;
+            }
+        }
+    }
+    .bg-img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .slide-text {
+        top: 50%;
+        left: 25%;
+        bottom: 0;
+        right: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transform: translateY(-50%);
+        @include media-breakpoint-only(xs) {
+            left: 5%;
+            right: 5%;
+            .text {
+                @include font-style ($roboto-l,13px,$w-text);
+            }
+        }
+        @include media-breakpoint-only(sm) {
+            left: 10%;
+            right: 10%;
+        }
+        @include media-breakpoint-only(md) {
+            left: 15%;
+            right: 15%;
+        }
+
+        .slide-title {
+            margin: 0;
+            @include font-style ($playfair-b,32px,$w);
+        }
+        .stroke {
+            width: 50px;
+            height: 1px;
+            margin: 3% 0px 4% 0px;
+            border: 1px solid $hover;
+        }
+        .text {
+            margin-bottom: 7%;
+            line-height: 1.714;
+            @include font-style ($roboto-l,14px,$w-text);
+        }
+        .btn {
+            border-color: $w;
+            @include font-style ($hammer,14px,$w);
+            &:hover,&:active,&:focus{
+                color: $hover;
+                outline: none;
+                box-shadow: none;
+                border-color: $hover;
+                background: transparent;
+            }
+        }
+    }
+}

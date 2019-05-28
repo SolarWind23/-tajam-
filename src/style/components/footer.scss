@@ -1,0 +1,186 @@
+.footer {
+    padding: 70px 0px;
+    background: url("../img/footer-bg.png") no-repeat;
+    background-size: cover;
+    @include media-breakpoint-only(xs) { 
+        padding: 35px 0px;
+    }
+    @include media-breakpoint-only(sm) { 
+        padding: 35px 0px;
+    }
+    .info {
+        .logo {
+            &-img{
+                margin-right: 10px;
+            }
+            margin-bottom: 27px;
+            @include font-style($roboto-t,30px,$hover);
+            @include media-breakpoint-only(xs) { 
+                display: flex;
+                margin-bottom: 15px;
+                justify-content: center;
+            }
+            @include media-breakpoint-only(sm) { 
+                margin-bottom: 15px;
+            }
+        }
+        .text {
+            margin-bottom: 90px;
+            @include font-style($roboto-l,14px,$w-text);
+            @include media-breakpoint-only(xs) { 
+                margin-bottom: 20px;
+            }
+            @include media-breakpoint-only(sm) { 
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+        }
+        .links-list {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            @include media-breakpoint-only(md) { 
+                text-align: center;
+                align-items: center;
+            }
+
+        }
+        .info-link{
+            text-decoration: none;
+            @include font-style($roboto-r,14px,$w-text);
+        }
+
+    }
+    
+   .contacts {
+        
+       .title {
+           margin: 15px 0px 35px 0px;
+           @include font-style($roboto-r, 15px, $w-text,uppercase);
+           @include media-breakpoint-only(xs) { 
+                margin: 25px 0px 15px 0px;
+            }   
+            @include media-breakpoint-only(sm) { 
+                margin: 15px 0 35px;
+            }
+        }
+        
+       .contact-info {
+           padding: 0px;
+           list-style-type: none;
+           @include font-style($roboto-l, 14px, $w-text);
+           @include media-breakpoint-only(sm) {
+                margin: 0px;
+                display: flex;
+                flex-direction: column;
+           }
+       }
+       .item {
+           display: flex;
+           margin-bottom: 22px;
+       }
+       .icon {
+           margin-right: 20px;
+       }
+   }
+   .social {
+       .title {
+           margin: 15px 0px 35px 0px;
+           @include font-style($roboto-r, 15px, $w-text,uppercase);
+           @include media-breakpoint-only(xs) { 
+                margin: 25px 0px 15px 0px;
+            }
+            @include media-breakpoint-only(sm) { 
+                margin: 35px 0 15px;
+            }
+        }
+        
+       .form-group {
+            flex-grow: 1;
+            @include media-breakpoint-only(xs) { 
+                margin: 0px;
+            }
+            @include media-breakpoint-only(md) { 
+                width: 70%;
+            }
+       }
+       
+       .form-control-plaintext {
+            padding: 15px;
+            margin-right: 10px;
+            border: 1px solid $w-text;
+            @include font-style($roboto-l, 14px, $w-text);
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border: 1px solid $w-text;
+            }
+            @include media-breakpoint-only(md) { 
+                margin: 0px;
+            }
+       }
+       .btn-primary {
+            color: $b;
+            border: none;
+            font-size: 25px;
+            padding: 10px 20px;
+            background-color: rgba($color: #9892ae, $alpha: .5);
+            @include media-breakpoint-only(md) { 
+                font-size: 15px;
+                border-radius: 0px;
+                padding: 16px 20px;
+            }
+        }
+       .social-link {
+            padding: 0px;
+            display: flex;
+            margin-top: 20px;
+            list-style-type: none;
+            @include media-breakpoint-only(sm) {
+                justify-content: center;
+                margin: 25px 0px 20px 0px;
+            }
+            @include media-breakpoint-only(md) { 
+                display: flex;
+                flex-wrap: wrap;
+                margin: 25px 0px 20px 0px;
+                justify-content: space-around;
+            }
+       }
+       .link-item {
+           width: 45px;
+           height: 45px;
+           display: flex;
+           cursor: pointer;
+           margin-right: 8px;
+           border-radius: 50%;
+           align-items: center;
+           justify-content: center;
+           border: 1px solid $w-text;
+           @include media-breakpoint-only(md) { 
+                margin: 0px 16px 10px 0px;
+            }
+           &:hover{
+               border-color: $hover;
+               .link {
+                   color: $hover;
+               }
+           }
+       }
+       .link {
+           display: flex;
+           color: $w-text;
+           font-size: 23px;
+           text-decoration: none;
+       }
+       .copy-right {
+            flex-grow: 1;
+            display: flex;
+            margin-top: 50px;
+            justify-content: flex-end;
+            @include font-style($roboto-r, 14px, $w-text);
+       }
+   }
+}

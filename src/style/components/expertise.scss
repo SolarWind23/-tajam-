@@ -1,0 +1,48 @@
+.expertise {
+    padding: 70px 0px;
+    text-align: center;
+    @include media-breakpoint-only(xs) { 
+        padding: 35px 0px;
+    }
+
+    .title{
+        margin-bottom: 17px;
+        @include font-style($playfair-bo,22px,$title-color, uppercase);
+        @include media-breakpoint-only(xs) { 
+            margin-bottom: 10px;
+        }
+    }
+    .sub-title {
+        margin-bottom: 70px;
+        @include font-style($playfair-r,22px,$title-color);
+        @include media-breakpoint-only(xs) { 
+            margin-bottom: 40px;
+        }
+    }
+      
+   .expertise-item {
+       .item-icon {
+            display: flex;
+            margin-bottom: 35px;
+            justify-content: center;
+            @include media-breakpoint-only(xs) { 
+                margin-bottom: 15px;
+            }
+        }
+       .title {
+           margin-bottom: 25px;
+           @include font-style($roboto-b,14px,$title-color);
+           @include media-breakpoint-only(xs) { 
+                margin-bottom: 15px;
+            }
+        }
+       .description {
+           padding: 0px 55px;
+           margin-bottom: 28px;
+           @include font-style($roboto-l,14px,$title-color);
+           @include media-breakpoint-down(md) { 
+                padding: 0px;
+            }
+        }
+   } 
+}

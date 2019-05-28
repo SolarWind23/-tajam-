@@ -1,0 +1,75 @@
+.our-work {
+    padding: 70px 0px;
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+
+    .title{
+        @include font-style($playfair-bo,22px, $title-color);
+    }
+
+    .link-wrapper{
+        display: flex;
+        margin-bottom: 70px;
+        align-content: center;
+        justify-content: flex-end;
+
+        .link {
+            margin: 0px;
+            text-decoration: none;
+            @include font-style($roboto-l,14px,$title-color);
+            &:hover {
+                color: $hover;
+                cursor: pointer;
+            }
+            @include media-breakpoint-down(sm) {
+                flex-grow: 1;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .works {
+
+        .row1,.row2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .work-img {
+            flex-grow: 1;
+            height: 200px;
+            min-width: 70px;
+            flex-basis: 120px;
+            @include media-breakpoint-down(sm) {
+                height: 180px;
+                flex-basis: 180px;
+            }
+        }
+    }
+
+    .load-link {
+        display: flex;
+        margin-top: 70px;
+        justify-content: center;
+
+        .btn {
+            padding: 15px 27px;
+            border-radius: 0px;
+            border-color: $text-color;
+            @include font-style ($hammer,16px,$text-color);
+            &:hover,&:active,&:focus{
+                color: $hover;
+                outline: none;
+                box-shadow: none;
+                border-color: $hover;
+                background: transparent;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: 40px;
+        }
+    }
+}

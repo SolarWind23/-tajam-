@@ -1,0 +1,60 @@
+.contact {
+    padding: 70px 0px;
+    
+    .contact-form {
+        .title {
+            margin-bottom: 35px;
+            @include font-style($playfair-bo, 22px,$title-color);
+        }
+        .form-control {
+            resize: none;
+            @include font-style($roboto-l, 14px,$title-color);
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: $text-color;
+            }
+        }
+        .btn {
+            padding: 10px 35px;
+            border-radius: 0px;
+            border-color: $text-color;
+            @include font-style ($hammer,14px,$text-color);
+            &:hover,&:active,&:focus{
+                color: $hover;
+                outline: none;
+                box-shadow: none;
+                border-color: $hover;
+                background: transparent;
+            }
+            @include media-breakpoint-down(sm) { 
+                width: 100%;
+                margin: 30px 0px;
+            }
+        }
+    }
+    .clients {
+        .clients-logo {
+            height: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 35px;
+            align-items: center;
+            align-content: space-between;
+            justify-content: space-around;
+        
+            .clients-logo-img {
+                flex-basis: 165px;
+                object-fit: contain;
+                @include media-breakpoint-only(xs) { 
+                    flex-basis: 170px;
+                    margin: 20px 0px;
+                }
+                @include media-breakpoint-only(sm) { 
+                    flex-basis: 180px;
+                    margin: 20px 0px;
+                }
+            }
+        }
+    }
+}
